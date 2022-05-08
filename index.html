@@ -16302,6 +16302,15 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Another important aspect we wanted to compare is the Rate of Shots specifically 3 Pointers vs Free Throw Shots.  Players tend to strategize time at the end of the game, with only a few minutes left if a team is losing their goal is to get the ball as fast as possible to make 3 Pointers.  To acheive this they foul the other team in the hopes that the team misses a shot or both and can only gain a max of 2 pts for the free throws where the other team can get the ball back and make a 3 to get 3 Points
+Both of these are extremely important in playoffs, 3 Pointers are known to be game winners creating massive hype and attention to the player who makes the shot.  Free throws end up becoming a large deciding factor in the game towards the final minutes when players intentially foul others</p>
+
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -16310,20 +16319,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Another important aspect we wanted to compare is the Rate of Shots specifically 3 Pointers vs Free Throw Shots</span>
-
-<span class="c1"># Players tend to strategize time at the end of the game, with only a few minutes left if a team is losing their goal is to get the ball as fast as possible to make 3 Pointers</span>
-<span class="c1"># To acheive this they foul the other team in the hopes that the team misses a shot or both and can only gain a max of 2 pts for the free throws where the other team can get the ball back and make </span>
-<span class="c1"># a 3 to get 3 Points</span>
-
-
-<span class="c1"># Both of these are extremely important in playoffs</span>
-<span class="c1"># 3 Pointers are known to be game winners creating massive hype and attention to the player who makes the shot</span>
-<span class="c1"># Free throws end up becoming a large deciding factor in the game towards the final minutes when players intentially foul others</span>
-
-
-
-<span class="c1"># Plotting the 3 Pointer Percentages Mean</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Plotting the 3 Pointer Percentages Mean</span>
 <span class="n">mean_3pts</span> <span class="o">=</span> <span class="n">finalPlayoffSeason</span><span class="p">[</span><span class="s1">&#39;3P%&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 <span class="n">mean_fts</span> <span class="o">=</span> <span class="n">finalPlayoffSeason</span><span class="p">[</span><span class="s1">&#39;FT%&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([{</span><span class="s1">&#39;Shot&#39;</span><span class="p">:</span> <span class="s1">&#39;3 Pointers&#39;</span><span class="p">,</span> <span class="s1">&#39;mean&#39;</span><span class="p">:</span> <span class="n">mean_3pts</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;Shot&#39;</span><span class="p">:</span> <span class="s1">&#39;Free Throws&#39;</span><span class="p">,</span> <span class="s1">&#39;mean&#39;</span><span class="p">:</span> <span class="n">mean_fts</span><span class="p">}])</span>
@@ -16332,9 +16328,6 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Mean in Percentages&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Mean Shot Percentages in the Playoffs&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="c1"># We can tell that more Free Throws are taken and made than 3 Pointers.  This makes sense as I mentioned aboved the end of the game involves 2 Free Throws per player while</span>
-<span class="c1"># the other team can only take 1 3 pointer at a time unless they also get the rebound which intoroduces another variable.</span>
 </pre></div>
 
      </div>
@@ -16369,18 +16362,26 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>We can tell that more Free Throws are taken and made than 3 Pointers.  This makes sense as I mentioned above, the end of the game involves 2 Free Throws per player while
+the other team can only take 1 three pointer at a time unless they also get the rebound which introduces another variable.</p>
+<p>We will now compare the Free Throws in the Finals and the Regular Season to see when more are made.  I would think it would be Playoffs but players might get nervous and miss more
+free throws at the end</p>
+
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># We will now compare the Free Throws from the Finals and the Regular Season to see when more are made.  I would think it would be Playoffs but players might get nervous and miss more</span>
-<span class="c1"># free throws at the end</span>
-
-<span class="c1"># Plotting the 3 Pointer Percentages Mean</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Plotting the 3 Pointer Percentages Mean</span>
 <span class="n">mean_fts_rs</span> <span class="o">=</span> <span class="n">finalRegularSeason</span><span class="p">[</span><span class="s1">&#39;FT%&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 <span class="n">mean_fts_ps</span> <span class="o">=</span> <span class="n">finalPlayoffSeason</span><span class="p">[</span><span class="s1">&#39;FT%&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([{</span><span class="s1">&#39;Shot&#39;</span><span class="p">:</span> <span class="s1">&#39;Regular Season&#39;</span><span class="p">,</span> <span class="s1">&#39;mean&#39;</span><span class="p">:</span> <span class="n">mean_fts_rs</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;Shot&#39;</span><span class="p">:</span> <span class="s1">&#39;Playoff Season&#39;</span><span class="p">,</span> <span class="s1">&#39;mean&#39;</span><span class="p">:</span> <span class="n">mean_fts_ps</span><span class="p">}])</span>
@@ -16389,9 +16390,6 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Mean in Percentages&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Mean Free Throw Percentages In Playoffs vs Regular Season&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-
-<span class="c1"># ????????</span>
 </pre></div>
 
      </div>
@@ -16426,22 +16424,14 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div>
 <div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>WORK IN PROGRESS</p>
 
-     </div>
 </div>
 </div>
-</div>
-
 </div>
 </body>
 
